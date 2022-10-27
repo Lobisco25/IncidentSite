@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+
+body {
+	background-color: #25000e;
+	color: white;
+	font-family: "Syne", sans-serif;
+	margin: 0;
+}
+
+.headerOuter {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+header {
+	width: 30rem;
+	margin: auto;
+	background-color: #4b011d;
+	border-radius: 0.8rem;
+	border-width: 2px;
+	border-color: white;
+	border-style: solid;
+}
+
+header .subtitle {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: larger;
+}
+
+.outerName {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+header .name {
+	margin: auto;
+	width: 50%;
+	font-size: xx-large;
+	display: flex;
+	text-shadow: 0 0 9px white;
+}
+
+header .name img {
+	margin-right: 0.5rem;
+	border-radius: 0.4rem;
+	border-width: 2px;
+	border-color: white;
+	border-style: solid;
+	box-shadow: 0 0 9px white;
+	width: 2rem;
+}
+
+header ul {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+header .add {
+	text-align: center;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.tableOuter {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.styled-table {
+    margin: auto;
+    min-width: 400px;
+    border-width: 2px;
+    border-radius: 1px;
+    border-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #380116;
+    
+}
+
+.styled-table thead tr {
+    background-color: #5D0124;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}

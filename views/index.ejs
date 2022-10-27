@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <title>IncidentBot</title>
+</head>
+<body>
+
+  <div class="headerOuter">
+  <header>
+    <div class="outerName">
+      <div class="name">
+      <img src="https://i.lobis.co/srvJ7.jpg" alt="IncidentBot">
+      IncidentBot
+    </div>
+    </div>
+    <p class="subtitle">
+      Um simples bot de lazer e utilidade para twitch.
+    </p>
+    <ul>
+      <li>Multilinguagem (inglês e português)</li>
+      <li>Conectado em <%= status.channelCount %> canais</li>
+      <li>Com <%= Object.keys(commands).length %> comandos</li>
+    </ul>
+    <p class="add">
+      Para adicionar o IncidentBot em seu chat, mande um -suggest com o seu username no chat do bot, ou entre em contato com @Lobisco25 ou com @Bytter_. O bot vai entrar em seu chat dentro de 24 horas.
+    </p>
+  </header>
+</div>
+
+ <div class="tableOuter">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Aliases</th>
+        <th>Descrição</th>
+        <th>Permissão</th>
+        <th>Cooldown</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const index in commands) {  %> 
+        <tr>
+          <td><%= commands[index].config.name %></td>
+          <td><%= commands[index].config.aliases.join(", ") ? commands[index].config.aliases.join(", ") :  "Nenhum" %> </td>
+          <td><%= commands[index].config.description %> </td>
+          <td><%= commands[index].config.adminOnly ? "Admin" : commands[index].config.streamerOnly ? "Streamer" : commands[index].config.modOnly ? "Mods" : "Todos" %> </td>
+          <td><%= `${commands[index].config.cooldown / 1000}s`.replace("NaNs", "Nenhum") %> </td>
+
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+ </div>
+
+</body>
+</html>
